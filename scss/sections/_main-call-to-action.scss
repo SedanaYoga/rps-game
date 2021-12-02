@@ -1,0 +1,112 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+@use '../components/animations' as *;
+
+.intro {
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(
+      189.96% 61.18% at 50% 38.82%,
+      rgba(255, 181, 72, 0) 0%,
+      rgba(52, 44, 29, 0.80319) 73.22%,
+      #08090a 97.74%
+    ),
+    url(../../images/main-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__info {
+    width: 100%;
+    text-align: center;
+    @include absoluteCenter;
+    @include flexColumnCenter;
+    h1 {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 72px;
+      line-height: 83px;
+      letter-spacing: 3px;
+      @include media-breakpoint-down(lg-2) {
+        font-size: 64px;
+      }
+      @include media-breakpoint-down(lg) {
+        font-size: 48px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 42px;
+        line-height: 2.5rem;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 0 1rem;
+        font-size: 32px;
+        line-height: 2.5rem;
+      }
+      @include media-breakpoint-between(galaxy-fold, moto-g4) {
+        font-size: 30px;
+        line-height: 2.5rem;
+      }
+    }
+    h3 {
+      font-family: Arial;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 2px;
+      @include media-breakpoint-down(sm) {
+        padding: 0 1rem;
+      }
+    }
+    .main-btn {
+      @include mainGradient;
+    }
+  }
+  &__scroll {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    // background-color: blue;
+    bottom: 5vh;
+    @include flexColumnCenter;
+    pfseanimation: scrollAnimation 1.8s ease-in infinite;
+    a {
+      position: relative;
+      width: 5rem;
+      text-decoration: none;
+      @include flexColumnCenter;
+    }
+    &--text {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: -1rem;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    &--animate {
+      position: relative;
+
+      display: block;
+      width: 159px;
+      height: 80px;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url("../../images/caret-down.svg") no-repeat center top;
+        background-size: 100% auto;
+      }
+      &:before {
+        animation: pulse 1.5s 0.25s infinite normal ease forwards;
+      }
+      &:after {
+        animation: pulse 1.5s 0.5s infinite normal ease forwards;
+      }
+    }
+  }
+}

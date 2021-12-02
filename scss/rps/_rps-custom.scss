@@ -1,0 +1,163 @@
+@use '../../scss/components/animations' as *;
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$bg_color: #f2ddc1;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Open Sans, sans-serif;
+}
+
+a {
+  color: #724c21;
+  text-decoration: none;
+}
+
+body {
+  background: $bg_color;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  .arrow-left {
+    margin-right: 2rem;
+    a {
+      font-size: 3rem;
+    }
+  }
+  .rps-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &__logo {
+      margin-right: 1rem;
+      img {
+        width: 50px;
+      }
+    }
+    &__text {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 49px;
+      color: #f9b23d;
+    }
+  }
+}
+
+// MAIN GAMEPLAY
+.main {
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.1em;
+  }
+  &__choice {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 150px;
+      background: black;
+      border-radius: 50%;
+      img {
+        &[alt="batu"] {
+          height: 75%;
+        }
+        height: 100%;
+        margin-bottom: 2.5rem;
+        cursor: pointer;
+        transition: 0.2s;
+        &.comp {
+          cursor: not-allowed;
+          &:hover {
+            animation: none;
+            transform: none;
+          }
+        }
+        &:hover {
+          animation-duration: 0.3s;
+          animation-name: wiggle;
+          animation-iteration-count: infinite;
+          transform: rotate(-3deg);
+        }
+      }
+    }
+  }
+
+  &-result {
+    position: relative;
+    &__box {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &__green {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      width: 15rem;
+      height: 10rem;
+      background: #4c9654;
+      transform: rotate(-20deg) translate(-35%, -70%);
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 144px;
+      font-weight: 700;
+      line-height: 196px;
+      letter-spacing: 0.1em;
+      color: black;
+    }
+    &__text {
+      color: white !important;
+      font-size: 38px !important;
+      font-weight: 700 !important;
+      line-height: 52px !important;
+      letter-spacing: 0.1em !important;
+    }
+  }
+
+  .refresh {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+      width: 100px;
+      transition: 0.2s;
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.win-div {
+  background: darkgreen !important;
+  border-radius: 2px solid #fff;
+}
+.lose-div {
+  background: darkred !important;
+  border-radius: 2px solid #fff;
+}
+.draw-div {
+  background: darkslategray !important;
+  border-radius: 2px solid #fff;
+}

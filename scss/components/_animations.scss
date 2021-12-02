@@ -1,0 +1,56 @@
+// SCROLL ANIMATION
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+
+// PULSE ANIMATION
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    background-position: center top;
+
+    background-size: 0 auto;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+
+    background-size: 20% auto;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    background-position: center bottom;
+
+    background-size: 0 auto;
+  }
+}
+
+// WIGGLE EFFECT
+@keyframes wiggle {
+  0% {
+    transform: rotate(-1deg);
+    transform: scale(1.1);
+  }
+  50% {
+    transform: rotate(1deg);
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,91 @@
+// GRAY COLOR
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  galaxy-fold: 280px,
+  features-3: 298px,
+  features-2: 316px,
+  moto-g4: 360px,
+  features-1: 382px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  lg-2: 1070px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+// FONT FAMILY
+$font-family-sans-serif: 'Open Sans', Arial, sans-serif;
+
+// THEME COLOR
+$orange-light: #ffb548;
+$orange-dark: #f3af34;
+$gray-secondary: $gray-800;
+
+// PRIMARY AND SECONDARY
+$primary: $orange-light;
+$secondary: $gray-secondary;
+
+// CAROUSEL
+
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+$carousel-indicator-spacer: 1rem;
+
+$carousel-control-icon-width: 2rem;
+
+$carousel-control-prev-icon-bg: unset;
+$carousel-control-next-icon-bg: unset;
+
+.carousel-indicators {
+  [data-bs-target] {
+    width: $carousel-indicator-width;
+    height: $carousel-indicator-height;
+    margin-right: $carousel-indicator-spacer;
+    margin-left: $carousel-indicator-spacer;
+    border-radius: 50%;
+  }
+}
+
+$accordion-padding-y: 1rem;
+$accordion-padding-x: 1.25rem;
+$accordion-color: $primary;
+$accordion-bg: none;
+$accordion-border-color: none;
+$accordion-border-radius: none;
+
+$accordion-body-padding-y: $accordion-padding-y;
+$accordion-body-padding-x: $accordion-padding-x;
+
+$accordion-button-padding-y: $accordion-padding-y;
+$accordion-button-padding-x: $accordion-padding-x;
+$accordion-button-color: $primary;
+$accordion-button-bg: none;
+$accordion-button-active-bg: none;
+$accordion-button-active-color: none;
+
+$accordion-button-focus-border-color: unset;
+$accordion-button-focus-box-shadow: unset;
+
+$accordion-icon-width: 1.25rem;
+$accordion-icon-color: none;
+$accordion-icon-active-color: none;
+$accordion-icon-transition: transform 0.2s ease-in-out;
+$accordion-icon-transform: rotate(-180deg);
+
+$accordion-button-icon: none;
+$accordion-button-active-icon: none;
+
+// IMPORT BOOTSTRAP CSS V5
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

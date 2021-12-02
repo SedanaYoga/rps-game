@@ -1,0 +1,265 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+@use '../components/animations' as *;
+
+.footer {
+  position: relative;
+  padding-top: 3rem;
+  max-width: 100%;
+  height: auto;
+  z-index: 0;
+
+  &-info {
+    &__left {
+      &--wrapper {
+        @include flexColumnCenter;
+        .statue-wrapper {
+          position: relative;
+          @include media-breakpoint-down(lg) {
+            position: absolute;
+            z-index: -1;
+            bottom: 10rem;
+            right: 2rem;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+              52.26% 52.26% at 50% 50%,
+              rgba(0, 0, 0, 0) 0%,
+              rgba(0, 0, 0, 0.29) 78.12%,
+              #000000 100%
+            );
+            z-index: 2;
+          }
+          &::before {
+            @include media-breakpoint-down(md) {
+              background: radial-gradient(
+                52.26% 52.26% at 50% 50%,
+                rgba(0, 0, 0, 0.5) 0%,
+                rgba(0, 0, 0, 0.8) 78.12%,
+                #000000 100%
+              );
+            }
+          }
+        }
+      }
+    }
+
+    &__right {
+      &--container {
+        margin-top: 5rem;
+        &__text {
+          &--subtitle {
+            font-family: Arial;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 2px;
+            @include media-breakpoint-down(sm) {
+              font-size: 20px;
+            }
+          }
+          &--title {
+            font-family: Arial;
+            font-size: 65px;
+            font-weight: 400;
+            line-height: 75px;
+            letter-spacing: 3px;
+            @include media-breakpoint-down(sm) {
+              font-size: 50px;
+              line-height: 60px;
+            }
+            @include media-breakpoint-down(moto-g4) {
+              font-size: 40px;
+              // line-height: 40px;
+            }
+          }
+          &--desc {
+            margin-bottom: 5rem;
+            font-family: Open Sans;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0px;
+            @include media-breakpoint-down(sm) {
+              font-size: 15px;
+              line-height: 16px;
+              padding-right: 10px;
+            }
+          }
+        }
+        &__subscribe {
+          @include media-breakpoint-down(sm) {
+            flex-direction: column;
+          }
+          position: relative;
+          &--input {
+            flex: 1.5;
+            label {
+              position: absolute;
+              z-index: 2;
+              top: -25px;
+              left: 0px;
+              color: black;
+              font-family: Open Sans;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 19px;
+              color: rgba(#ffffff, 0.5);
+            }
+            &--email {
+              border-radius: 5px;
+              width: 100%;
+              height: 60px;
+              background: #ffffff20;
+              outline: none;
+              border: none;
+              padding-left: 20px;
+              color: $primary;
+              // @include media-breakpoint-down(sm) {
+              //   flex: 1;
+              //   flex-direction: column;
+              // }
+            }
+          }
+          &--btn {
+            flex: 1;
+            @include media-breakpoint-down(sm) {
+              width: 100%;
+              height: 60px !important;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-sm {
+    width: 100%;
+    min-height: 4rem;
+    text-transform: uppercase;
+    @include flexRowCenter;
+    @include media-breakpoint-down(md) {
+      @include flexColumnCenter;
+      justify-content: center;
+    }
+    justify-content: end;
+    align-items: center;
+    border-bottom: 0.87px solid rgba(#ffffff, 0.5);
+    &__menu {
+      margin-right: 3rem;
+      height: 100%;
+      ul {
+        font-family: Open Sans;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        height: 100%;
+        // background: red;
+        padding-top: 1rem;
+        @include flexRowCenter;
+        gap: 1.5rem;
+        li {
+          position: relative;
+          list-style-type: none;
+          a {
+            color: $white;
+            text-decoration: none;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            transition: all 500ms ease-in-out;
+          }
+          &:hover {
+            &::before {
+              content: '';
+              position: absolute;
+              width: 50%;
+              height: 3px;
+              bottom: -5px;
+              left: 50%;
+              transform: translateX(-50%);
+              background: $primary;
+            }
+          }
+        }
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+    }
+    &__icons {
+      height: 100%;
+      @include flexRowCenter;
+      gap: 1.5rem;
+      a {
+        color: $white;
+        text-decoration: none;
+        .bi {
+          @include media-breakpoint-down(md) {
+            font-size: 30px;
+          }
+        }
+        .bi-facebook:hover {
+          color: #1877f2;
+        }
+        .bi-twitter:hover {
+          color: #1da1f2;
+        }
+        .bi-youtube:hover {
+          color: #cd201f;
+        }
+        .bi-twitch:hover {
+          color: #6441a4;
+        }
+      }
+      @include media-breakpoint-down(md) {
+        margin: 1.5rem;
+        gap: 2.5rem;
+      }
+    }
+  }
+  .footer-copy {
+    width: 100%;
+    height: 6rem;
+    @include flexRowCenter;
+    align-items: flex-start;
+    margin-top: 1rem;
+    justify-content: space-between;
+    &__info {
+      font-family: Open Sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0px;
+      color: rgba(#ffffff, 0.5);
+    }
+    &__policy {
+      @include flexRowCenter;
+      gap: 1rem;
+      font-family: Open Sans;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0.1em;
+      a {
+        color: #fff;
+        text-decoration: none;
+        border-right: 1px solid #fff;
+        padding-right: 1rem;
+        &:last-child {
+          padding-right: 0px;
+          border-right: none;
+        }
+      }
+    }
+  }
+}
