@@ -42,7 +42,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://sedanayoga.github.io/rps-game/rps-game.html)
 
-A repository for completing Binar Fullstack Web Development Bootcamp - Chapter 3.
+A repository for completing Binar Fullstack Web Development Bootcamp - Chapter 4.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -53,10 +53,13 @@ The following lists show my development stack:
 - [Bootstrap v5.0](https://getbootstrap.com/)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [Sass](https://sass-lang.com/)
+- [Vanilla Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-Tools: 
+Tools:
+[Git](https://git-scm.com/)
 [Visual Studio Code](https://code.visualstudio.com/)
 [Neovim](https://neovim.io/)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Feature
