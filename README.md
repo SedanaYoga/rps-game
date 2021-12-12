@@ -3,13 +3,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Binar GameHub Project</h3>
+  <h3 align="center">Rock, Paper, Scissor Game Challenge</h3>
 
   <p align="center">
-    Play Traditional Game and Experience new traditional game online.
+    Play Traditional Rock Paper Scissor Game Online.
     <br />
     <br />
-    <a href="https://sedanayoga.github.io/binar-gamehub/">View Demo</a>
+    <a href="https://sedanayoga.github.io/rps-game/rps-game.html">View Demo</a>
   </p>
 </div>
 
@@ -40,7 +40,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://sedanayoga.github.io/binar-gamehub/)
+[![Product Name Screen Shot][product-screenshot]](https://sedanayoga.github.io/rps-game/rps-game.html)
 
 A repository for completing Binar Fullstack Web Development Bootcamp - Chapter 3.
 
@@ -54,20 +54,19 @@ The following lists show my development stack:
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [Sass](https://sass-lang.com/)
 
-Tools: [Visual Studio Code](https://code.visualstudio.com/)
-
+Tools: 
+[Visual Studio Code](https://code.visualstudio.com/)
+[Neovim](https://neovim.io/)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Feature
 
-Since we are using Bootstrap as main CSS framework, I managed to enhance my project with Bootstrap Layout, Components, Utilities. The following lists are some of main feature:
+Kind of additional page for previous challenge, I learnt a lot of Object Oriented Programming keys in this project like:
 
-- `Bootstrap Navbar` with a bit modification => layouting logo, menu, and signin/up
-- `Bootstrap Carousel` with `Sass` modification => Indicator, Navigation button, Border radius
-- `CSS Animation` on `Scroll Story` button
-- `FULLY RESPONSIVE` until small breakpoint (`sm` Bootstrap Breakpoint)
-
-Please refer to the `Bootstrap v5.1` and `Sass` documentation.
+- `Inheritance` => Used in deriving both player side (User / Computer)
+- `Abstraction` => Just realized Abstraction needs more effort before starting the code, still has corelation with inheritance
+- `Encapsulation` => Used to get some functions private.
+- `Combine to DOM` => A bit struggle in combining DOM manipulation and all the logic
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -86,7 +85,7 @@ If you want to edit the code, you need to have `nodejs` and `NPM` first for inst
 
 ## Usage
 
-You can run it by opening `index.html` file or creating Live Server via VSCode extensions instead
+You can run it by opening `index.html` file or creating Live Server via VSCode extensions instead, then click `Play Game` button since the game is merged to the previous challenge.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -109,4 +108,4 @@ Sedana Yoga - [@cok_yoga](https://twitter.com/Cok_Yoga)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[product-screenshot]: images/project-preview.png
+[product-screenshot]: images/rps-preview.png
